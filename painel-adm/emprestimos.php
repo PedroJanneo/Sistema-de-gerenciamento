@@ -23,7 +23,6 @@ if ($total_reg >0){?>
                     <th>Responsavel</th>
                     <th>Item</th>
                     <th>Telefone</th>
-                    <th>Secretaria</th>
                     <th>Departamento</th>
                     <th>Data-saida</th>
                     <th>Data-devolução</th>
@@ -44,7 +43,6 @@ if ($total_reg >0){?>
                     <td><?php echo $res[$i]['responsavel']?></td>
                     <td><?php echo $res[$i]['item']?></td>
                     <td><?php echo $res[$i]['telefone']?></td>
-                    <td><?php echo $res[$i]['secretaria']?></td>
                     <td><?php echo $res[$i]['departamento']?></td>
                     <td><?php echo $res[$i]['saida']?></td>
                     <td><?php echo $res[$i]['devolucao']?></td>
@@ -59,11 +57,6 @@ if ($total_reg >0){?>
                         <a href="index.php?pagina=<?php echo $pag?>&funcao=excluir&id=<?php echo $res[$i]['id']?>"
                             title="Excluir Registro">
                             <i class="bi bi-x-lg text-danger"></i></a>
-
-
-
-
-
 
                     </td>
 
@@ -171,95 +164,33 @@ if(@$_GET['funcao'] == "editar"){
 
                 <div class="modal-body">
                     <div class="mb-3">
-                        
-                        <label for="exampleFormControlInput1" class="form-label">Secretaria</label>
-                        <select class="form-select mt-1" aria-label="Default select example" name="secretaria"
-                            id="secretaria" required="" value="<?php echo @$secretaria ?>" >
-                            <option disabled <?php if(@$secretaria == ''){ ?> selected <?php } ?> value="">Escolha a secretaria
-                            </option> 
 
-                            <option <?php if(@$secretaria == 'GP'){ ?> selected <?php } ?> value="GP">GP - Gabinete do
-                                Prefeito
+                        <label for="exampleFormControlInput1" class="form-label">Departamento</label>
+                        <select class="form-select mt-1" aria-label="Default select example" name="departamento"
+                            id="departamento" required value="<?php echo @$departamento ?>">
+                            <option disabled <?php if(@$departamento == ''){ ?> selected <?php } ?> value="">
+                                Escolha o departamento
                             </option>
 
-                            <option <?php if(@$secretaria == 'SAS'){ ?> selected <?php } ?> value="SAS">SAS -
-                                Assistência Social</option>
-
-                            <option <?php if(@$secretaria == 'SDE'){ ?> selected <?php } ?> value="SDE">SDE -
-                                Desenvolvimento Econômico
+                            <option <?php if(@$departamento == 'ADM'){ ?> selected <?php } ?> value="ADM">ADM -
+                                Administração</option>
+                            <option <?php if(@$departamento == 'MKT'){ ?> selected <?php } ?> value="MKT">MKT -
+                                Marketing</option>
+                            <option <?php if(@$departamento == 'VND'){ ?> selected <?php } ?> value="VND">VND - Vendas
                             </option>
-
-                            <option <?php if(@$secretaria == 'SDS'){ ?> selected <?php } ?> value="SDS">SDS - Secretaria
-                                e Defesa (CGM)
-                            </option>
-
-                            <option <?php if(@$secretaria == 'SEC'){ ?> selected <?php } ?> value="SEC">SEC - Cultura
-                            </option>
-
-                            <option <?php if(@$secretaria == 'SECOM'){ ?> selected <?php } ?> value="SECOM">SECOM -
-                                Comunicação
-                            </option>
-
-                            <option <?php if(@$secretaria == 'SEDUC'){ ?> selected <?php } ?> value="SEDUC">SEDUC -
-                                Educação
-                            </option>
-
-                            <option <?php if(@$secretaria == 'SEFAZ'){ ?> selected <?php } ?> value="SEFAZ">SEFAZ -
-                                Fazenda
-                            </option>
-
-                            <option <?php if(@$secretaria == 'SEHAB'){ ?> selected <?php } ?> value="SEHAB">SEHAB -
-                                Habilitação
-                            </option>
-
-                            <option <?php if(@$secretaria == 'SEMA'){ ?> selected <?php } ?> value="SEMA">SEMA -
-                                Manutenção
-                            </option>
-
-                            <option <?php if(@$secretaria == 'SEMEL'){ ?> selected <?php } ?> value="SEMEL">SEMEL -
-                                Esporte e Lazer
-                            </option>
-
-                            <option <?php if(@$secretaria == 'SEPLAN'){ ?> selected <?php } ?> value="SEPLAN">SEPLAN -
-                                Planejamento
-                            </option>
-
-                            <option <?php if(@$secretaria == 'SETRAM'){ ?> selected <?php } ?> value="SETRAM">SETRAM -
-                                Transporte
-                            </option>
-
-                            <option <?php if(@$secretaria == 'SGP'){ ?> selected <?php } ?> value="SGP">SGP - Gestão de
-                                Pessoas
-                            </option>
-
-                            <option <?php if(@$secretaria == 'SJ'){ ?> selected <?php } ?> value="SJ">SJ - Jurídico
-                            </option>
-
-                            <option <?php if(@$secretaria == 'SMA'){ ?> selected <?php } ?> value="SMA">SMA -
-                                Administração
-                            </option>
-
-                            <option <?php if(@$secretaria == 'SMG'){ ?> selected <?php } ?> value="SMG">SMG - Governo
-                            </option>
-
-                            <option <?php if(@$secretaria == 'SMO'){ ?> selected <?php } ?> value="SMO">SMO - Obras
-                            </option>
-
-                            <option <?php if(@$secretaria == 'SMS'){ ?> selected <?php } ?> value="SMS">SMS - Saúde
-                            </option>
-
+                            <option <?php if(@$departamento == 'RH'){ ?> selected <?php } ?> value="RH">RH - Recursos
+                                Humanos</option>
+                            <option <?php if(@$departamento == 'TI'){ ?> selected <?php } ?> value="TI">TI - Tecnologia
+                                da Informação</option>
+                            <option <?php if(@$departamento == 'FIN'){ ?> selected <?php } ?> value="FIN">FIN -
+                                Financeiro</option>
+                            <option <?php if(@$departamento == 'LOG'){ ?> selected <?php } ?> value="LOG">LOG -
+                                Logística</option>
                         </select>
                     </div>
 
                 </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Departamento</label>
-                        <input type="text" class="form-control" id="departamento" name="departamento"
-                            placeholder="Departamento" required="" value="<?php echo @$departamento?>">
-                    </div>
-                </div>
-
+                
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Saida</label>
@@ -371,4 +302,7 @@ $(document).ready(function() {
         "ordering": false
     });
 });
-</script>
+</script>]
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script type="text/javascript" src="../vendor/js/mascaras.js"></script>
