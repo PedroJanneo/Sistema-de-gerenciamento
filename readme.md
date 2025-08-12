@@ -11,11 +11,11 @@ Caso que você use o XAMPP, dê uma pesquisada rapida como fazer a importação 
 Como dito anteriormente, ele tem dois CRUD:
 - Usuario: onde possa fazer o cadastro de forma simples e interativa, basta appertar no botão Usuarios la em cima na navbar (ele te levara para outra pagina) e depois no botão NOVO USUARIO, onde ira abrir uma modal, basta fornecer seu nme, email, senha (onde sera criptografada com hash 512 para maior segurança), sua função (testador, vendedor, etc) e nivel (no qual no momento só tem ADM), feito isso, aperte no botão salvar, você sera redirecionado para uma lista de todos os usuarios cadastrados, contendo 2 opcções na parte AÇÕES, editar perfil e excluir. Há um mecanismo para evitar duplicidade no email
 
-- Empresimos: onde possa fazer o emprestimo de forma simples e interativa, basta appertar no botão Emprestimos la em cima na navbar (ele te levara para outra pagina) e depois no botão NOVO EMPRESTIMO, onde ira abrir uma modal, basta fornecer alguns dados, como responsavel ( quem pegou o item), o item, telefone para contato, secretaria ( que o responsavel faz parte), departamento e saida do item. Logo após clicar em salvar, você ira ver uma lista de todos os itens emprestados, na parte ações (como anteriormente) teremos apenaas 2 ações, uma para devolver o item ( pedindo 2 dados, data da devolução e quem recebeu o item) e o outro para exclusão.
+- Empresimos: onde possa fazer o emprestimo de forma simples e interativa, basta appertar no botão Emprestimos la em cima na navbar (ele te levara para outra pagina) e depois no botão NOVO EMPRESTIMO, onde ira abrir uma modal, basta fornecer alguns dados, como responsavel ( quem pegou o item), o item, telefone para contato, departamento e saida do item. Logo após clicar em salvar, você ira ver uma lista de todos os itens emprestados, na parte ações (como anteriormente) teremos apenaas 2 ações, uma para devolver o item ( pedindo 2 dados, data da devolução e quem recebeu o item) e o outro para exclusão.
 
 ## Tecnologias utilizadas:
 - `` HTML ``
 - `` PHP ``
-- `` Banco de dados (XAMPP)``
+- `` Banco de dados``
 - `` CSS ``
-- ``Bootstrap ``
+- `` Bootstrap ``
